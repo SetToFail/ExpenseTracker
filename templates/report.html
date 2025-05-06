@@ -1,11 +1,18 @@
-<!-- templates/report.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Отчёт</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Отчёт расходов</h1>
-    <pre>{{ report }}</pre>
+    <div class="container">  <!-- Контейнер для центрирования и отступов -->
+        <h1 class="mt-4">Отчёт расходов</h1>  <!-- mt-4: margin-top -->
+        <pre class="border p-3">{{ report }}</pre>  <!-- border, p-3: стилизация блока pre,  увеличил отступы-->
+        <a href="/" class="btn btn-secondary mt-3">Назад к списку расходов</a> <!-- Кнопка "Назад" -->
+    </div> <!-- /container -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

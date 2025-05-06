@@ -17,9 +17,16 @@ class ExpenseController:
         return self.service.get_all_expenses()
 
     def get_report(self, report_type):
-        generator = self.report_generator_factory.get_report_generator(report_type) # Исправлена опечатка
+        generator = self.report_generator_factory.get_report_generator(report_type)
         if generator:
-            expenses = self.service.get_all_expenses()
+            if report_type == 'daily':
+                expenses = self.service.get_daily_expenses()
+            elif report_type == 'weekly':
+                expenses = self.service.get_weekly_expenses()
+            elif report_type == 'monthly':
+                expenses = self.service.get_monthly_expenses()
+            else:
+                expenses = self.service.get_all_expenses()  # В случае ошибки, показывать все
             report = generator.generate_report(expenses)
             return report
         else:
