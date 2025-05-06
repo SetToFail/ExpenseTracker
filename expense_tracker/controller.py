@@ -3,7 +3,6 @@
 from .service import ExpenseService
 from .repository import ExpenseRepository
 from .report_generator import ReportGeneratorFactory
-from .visualization import VisualizationService
 
 class ExpenseController:
     def __init__(self, db_path):

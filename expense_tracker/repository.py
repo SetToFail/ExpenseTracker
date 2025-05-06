@@ -33,5 +33,5 @@ class ExpenseRepository:
 
     def get_all_expenses(self):
         cursor = self.get_db().cursor()
-        cursor.execute("SELECT amount, category, description, date FROM expenses")
+        cursor.execute("SELECT amount, category, description, date FROM expenses ORDER BY date DESC")
         return cursor.fetchall()

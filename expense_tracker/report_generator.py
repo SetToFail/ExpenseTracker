@@ -35,7 +35,7 @@ class ReportGeneratorFactory:
             return DailyReportGenerator()
         elif report_type == 'weekly':
             return WeeklyReportGenerator()
-        elif report_type == 'monthly':  # Убедитесь, что здесь именно 'monthly'
+        elif report_type == 'monthly': 
             return MonthlyReportGenerator()
         else:
             return None

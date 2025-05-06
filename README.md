@@ -14,7 +14,7 @@
 
 1.  Установите Python 3.
 2.  Установите Flask: `pip install flask`
-3.  Клонируйте репозиторий: `git clone https://github.com/SetToFail/expense_tracker.git`
+3.  Клонируйте репозиторий: `git clone https://github.com/SetToFail/ExpenseTracker`
 4.  Перейдите в директорию проекта: `cd expense_tracker`
 5.  Запустите приложение: `python app.py`
 
