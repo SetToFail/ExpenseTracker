@@ -24,13 +24,22 @@
 
 ## Скриншоты
 
-(Здесь можно добавить скриншоты интерфейса)
+![image](https://github.com/user-attachments/assets/b283f2e2-98f3-427a-9285-6c1edc902cff)
+![image](https://github.com/user-attachments/assets/706b726b-5938-4507-853f-97e5954b475a)
+![image](https://github.com/user-attachments/assets/b92559aa-a7d9-4dbf-87dc-999781df4f81)
+![image](https://github.com/user-attachments/assets/0478e790-6b76-4a74-9ad0-198f86a97f50)
+
+
+
+
 
 ## Использованные технологии
 
+*   HTML5
 *   Python
 *   Flask
 *   SQLite
+*   Bootstrap (CDN)
 
 ## Архитектура
 
@@ -44,5 +53,6 @@
 
 ## Паттерны проектирования
 
-*   Repository
-*   Factory Method
+*   **Repository:**  Абстрагирует доступ к данным, позволяя легко заменять источник данных.
+*   **Factory Method:**  Используется для создания различных типов генераторов отчетов.
+*   **Dependency Injection:** Контроллер получает зависимости через конструктор.
