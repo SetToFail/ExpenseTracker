@@ -1,33 +1,24 @@
-# expense_tracker/report_generator.py
-
 class ReportGenerator:
+    def __init__(self, title):
+        self.title = title
+
     def generate_report(self, expenses):
-        report = ""
+        report = f"{self.title}:\n"
         for expense in expenses:
-            report += f"{expense[0]} - {expense[1]} - {expense[3]}\n"  # Доступ к элементам по индексу
+            report += f"{expense['amount']} - {expense['category']} - {expense['date']}\n"
         return report
 
 class DailyReportGenerator(ReportGenerator):
-    def generate_report(self, expenses):
-        report = "Отчёт на сегодня:\n"
-        for expense in expenses:
-            report += f"{expense[0]} - {expense[1]} - {expense[3]}\n"  # Доступ к элементам по индексу
-        return report
+    def __init__(self):
+        super().__init__("Отчёт на сегодня")
 
 class WeeklyReportGenerator(ReportGenerator):
-    def generate_report(self, expenses):
-        report = "Еженедельный очёт:\n"
-        for expense in expenses:
-            report += f"{expense[0]} - {expense[1]} - {expense[3]}\n"  # Доступ к элементам по индексу
-        return report
+    def __init__(self):
+        super().__init__("Еженедельный отчёт")
     
 class MonthlyReportGenerator(ReportGenerator):
-    def generate_report(self, expenses):
-        report = "Месячный отчёт:\n"
-        for expense in expenses:
-            report += f"{expense[0]} - {expense[1]} - {expense[3]}\n"
-        return report
-
+    def __init__(self):
+        super().__init__("Месячный отчёт")
 
 class ReportGeneratorFactory:
     def get_report_generator(self, report_type):
