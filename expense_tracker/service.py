@@ -1,7 +1,7 @@
 from .repository import ExpenseRepository
 
 class ExpenseService:
-    def __init__(self, repository: ExpenseRepository):  # Принимаем готовый репозиторий
+    def __init__(self, repository: ExpenseRepository): 
         self.repository = repository
 
     def add_expense(self, amount, category, description):
