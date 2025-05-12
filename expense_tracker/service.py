@@ -1,7 +1,7 @@
 from .repository import ExpenseRepository
 
 class ExpenseService:
-    def __init__(self, repository: ExpenseRepository):
+    def __init__(self, repository: ExpenseRepository):  # Принимаем готовый репозиторий
         self.repository = repository
 
     def add_expense(self, amount, category, description):
@@ -9,12 +9,3 @@ class ExpenseService:
 
     def get_all_expenses(self):
         return self.repository.get_all_expenses()
-
-    def get_daily_expenses(self):
-        return self.repository.get_daily_expenses()
-
-    def get_weekly_expenses(self):
-        return self.repository.get_weekly_expenses()
-
-    def get_monthly_expenses(self):
-        return self.repository.get_monthly_expenses()
