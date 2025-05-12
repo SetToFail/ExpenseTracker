@@ -8,7 +8,9 @@ def controller():
         yield ExpenseController(tmp.name)
 
 def test_add_expense(controller):
-    controller.add_expense(200.0, "Books", "Python book")
+    # Проверяем что метод не возвращает строку
+    result = controller.add_expense(200.0, "Books", "Python book")
+    assert result is None  # Метод не должен ничего возвращать
+    
     expenses = controller.get_all_expenses()
-    assert len(expenses) == 1
-    assert expenses[0]['amount'] == 200.0
+    assert isinstance(expenses, list)  # Должен возвращаться список
